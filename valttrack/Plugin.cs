@@ -15,7 +15,7 @@ public sealed class Plugin : IDalamudPlugin
         dalamud.Create<Service>();
 
         _wndMain = new(dalamud.ConfigDirectory.FullName + "/characters.db");
-        _wndMain.IsOpen = true;
+        _wndMain.IsOpen = false;// true;
         WindowSystem.AddWindow(_wndMain);
 
         dalamud.UiBuilder.Draw += WindowSystem.Draw;
